@@ -1,0 +1,21 @@
+import random
+random_number = random.randint(1,50)
+attempts = 10
+while attempts > 0:
+    print ("Guess a number between 1-50")
+    x_guess = int(input("Enter your guess:"))
+    if random_number == x_guess:
+        print("Congrats you win!")
+        break
+    if x_guess < 1 or x_guess > 50:
+        print ("Please enter a number between 1-50")
+        continue
+    elif x_guess > random_number and x_guess <= 50:
+        print ("Too high! Try again!")
+    elif x_guess < random_number and x_guess >= 1:
+        print ("Too low! Try again!")
+    attempts -= 1
+    print("Attempts =", attempts)
+    if attempts == 0:
+        print ("You have run out of attempts! The number was", random_number)
+        break
