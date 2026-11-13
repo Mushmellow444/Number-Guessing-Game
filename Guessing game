@@ -31,6 +31,8 @@ while attempts > 0:
         elif input_choice.lower() == "n":
             print ("Thanks for playing!")
             break
+        else:
+            print ("Please enter a number between 1-", max_number)
     if x_guess < 1 or x_guess > max_number:
         print ("Please enter a number between 1-", max_number)
         continue
@@ -40,6 +42,7 @@ while attempts > 0:
         print ("Too low! Try again!")
     attempts -= 1
     print("Attempts =", attempts)
+    
     if attempts == 0:
         print ("You have run out of attempts! The number was", random_number)
         print ("Play again? (y/n)")
@@ -51,5 +54,3 @@ while attempts > 0:
         elif input_choice.lower() == "n":
             print ("Thanks for playing!")
             break
-    else:
-        print ("Please enter a number between 1-", max_number)
